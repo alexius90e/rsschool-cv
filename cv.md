@@ -71,3 +71,14 @@ class VigenereCipheringMachine {
   }
 }
 ```
+
+## Experience
+
+2020 IdeaWebLab front-end developer
+
+## Education
+
+Mogilev State University of Food Technologies, speciality: Automation of Technological Processes and Production
+
+## English Level
+English Elementary(A2)
