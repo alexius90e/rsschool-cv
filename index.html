@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <main class="main-container">
+            <aside>
+                <figure class="avatar">
+                    <img src="./assets/aleksei1.jpg" alt="">
+                </figure>
+                <h2>Technical Skills</h2>
+                <ul>
+                    <li>HTML5, CSS, SCSS</li>
+                    <li>Javascript, jQuery, React JS</li>
+                    <li>Bootstrap</li>
+                    <li>Python</li>
+                </ul>
+                <h2>Contacts</h2>
+                <ul>
+                    <li>phone: <a href="tel:+375291043897">+375291043897</a></li>
+                    <li>mail: <a href="mailto:alexius90e@gmail.com">alexius90e@gmail.com</a></li>
+                    <li>telegram: <a href="https://t.me/alexeykarzhov">@alexeykarzhov</a></li>
+                </ul>
+                <h2>English Level</h2>
+                <p>English Elementary(A2)</p>
+            </aside>
+            <section>
+                <h1>Aliaksei Karzhou</h1>
+                <h2>Summary</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ipsa impedit explicabo tempore error quo itaque, deserunt possimus iusto sunt tenetur ad autem rem consequatur inventore est vitae ratione tempora!</p>
+                <h2>Experience</h2>
+                <p><b>2020-2021</b> IdeaWebLab front-end developer</p>
+                <h2>Education</h2>
+                <p>Mogilev State University of Food Technologies, speciality: Automation of Technological Processes and Production</p>
+                <h2>Code example</h2>
+                <p>This code creates the class that emulates vigenere ciphering machine.</p>
+                <code>
+                    class VigenereCipheringMachine {<br>
+                        constructor(isDirect = true) {<br>
+                          this.isDirect = isDirect;<br>
+                          this.letters = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ']<br>
+                        }<br>
+                        encrypt(message, key) {<br>
+                          if (message === undefined || key === undefined){<br>
+                            throw new Error();<br>
+                          }<br>
+                          message = message.toUpperCase().split('');<br>
+                          key = key.toUpperCase()<br>
+                          .repeat(Math.ceil(message.length / key.length))<br>
+                          .slice(0, message.length)<br>
+                          .split('');<br>
+                          let diff = 0;<br>
+                          let result = message.map((item, index) => {<br>
+                            if (this.letters.includes(item)){<br>
+                              return this.letters[(this.letters.indexOf(item) + this.letters.indexOf(key[index - diff])) % this.letters.length];<br>
+                            } else {<br>
+                              diff += 1;<br>
+                              return item;<br>
+                            }<br>
+                          })<br>
+                          return this.isDirect ? result.join('') : result.reverse().join('');<br>
+                        }<br>    
+                      }
+                </code>
+            </section>
+        </main>
+    </body>
+</html>
